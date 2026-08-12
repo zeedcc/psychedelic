@@ -79984,6 +79984,9 @@ async function authHandler(req, res) {
     res.status(500).json({ error: "Authentication request failed" });
   }
 }
+async function handler$e(req, res) {
+  await authHandler(req, res);
+}
 async function handler$d(req, res) {
   await authHandler(req, res);
 }
@@ -79994,9 +79997,6 @@ async function handler$b(req, res) {
   await authHandler(req, res);
 }
 async function handler$a(req, res) {
-  await authHandler(req, res);
-}
-async function handler$9(req, res) {
   try {
     const { customer_name, delivery_email, cart_items, total_amount, currency } = req.body;
     if (!delivery_email || !(cart_items == null ? void 0 : cart_items.length) || !total_amount) {
@@ -80260,7 +80260,7 @@ Questions? Reach us on Telegram: https://t.me/etherzonee
 
 — Ethereal Psyche`;
 }
-async function handler$8(req, res) {
+async function handler$9(req, res) {
   try {
     const body = req.body;
     const { delivery_email, customer_name, cart_items, total_amount } = body;
@@ -80284,7 +80284,7 @@ async function handler$8(req, res) {
     return res.status(500).json({ error: "Fulfillment email failed.", message: String(err) });
   }
 }
-async function handler$7(_req, res) {
+async function handler$8(_req, res) {
   res.json({
     status: "ok",
     timestamp: (/* @__PURE__ */ new Date()).toISOString(),
@@ -80312,7 +80312,7 @@ async function requireAdmin(req, res) {
     return null;
   }
 }
-async function handler$6(req, res) {
+async function handler$7(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   try {
@@ -80322,7 +80322,7 @@ async function handler$6(req, res) {
     res.status(500).json({ error: "Failed to fetch products", message: String(err) });
   }
 }
-async function handler$5(req, res) {
+async function handler$6(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   const { name, description, price, badge, type: type2, category, stock, active } = req.body;
@@ -80348,7 +80348,7 @@ async function handler$5(req, res) {
     res.status(500).json({ error: "Failed to create product", message: String(err) });
   }
 }
-async function handler$4(req, res) {
+async function handler$5(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   const id = parseInt(String(req.params.id), 10);
@@ -80373,7 +80373,7 @@ async function handler$4(req, res) {
     res.status(500).json({ error: "Failed to update product", message: String(err) });
   }
 }
-async function handler$3(req, res) {
+async function handler$4(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   const id = parseInt(String(req.params.id), 10);
@@ -80385,7 +80385,7 @@ async function handler$3(req, res) {
     res.status(500).json({ error: "Failed to delete product", message: String(err) });
   }
 }
-async function handler$2(req, res) {
+async function handler$3(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   try {
@@ -80401,7 +80401,7 @@ async function handler$2(req, res) {
   }
 }
 const VALID_STATUSES = ["pending", "processing", "delivered", "cancelled"];
-async function handler$1(req, res) {
+async function handler$2(req, res) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
   const id = parseInt(String(req.params.id), 10);
@@ -80421,7 +80421,7 @@ async function handler$1(req, res) {
 }
 const ADMIN_EMAIL = "classicalueue@gmail.com";
 const DEFAULT_ADMIN_PASSWORD = "Rinchanhai0912!";
-async function handler(req, res) {
+async function handler$1(req, res) {
   const { password } = req.body;
   const resolvedPassword = password || DEFAULT_ADMIN_PASSWORD;
   if (resolvedPassword.length < 8) {
@@ -80444,6 +80444,46 @@ async function handler(req, res) {
     return res.status(201).json({ success: true, message: `Admin account created for ${ADMIN_EMAIL}` });
   } catch (err) {
     return res.status(500).json({ error: "Failed to create admin", message: String(err) });
+  }
+}
+async function handler(req, res) {
+  var _a3;
+  const body = req.body;
+  if (!body.delivery_email || !((_a3 = body.cart_items) == null ? void 0 : _a3.length)) {
+    return res.status(400).json({
+      success: false,
+      error: "Missing required fields: delivery_email and cart_items"
+    });
+  }
+  try {
+    const itemCount = body.cart_items.length;
+    const totalAmount = body.total_amount || 0;
+    const currency = body.currency || "PHP";
+    console.log("payment.webhook.received", {
+      customer: body.customer_name || "Anonymous",
+      email: body.delivery_email,
+      items: itemCount,
+      total: totalAmount,
+      currency
+    });
+    return res.status(200).json({
+      success: true,
+      message: "Payment received and order confirmed",
+      orderId: `ORD-${Date.now()}`,
+      customer: body.customer_name || "Stargazer",
+      email: body.delivery_email,
+      items: itemCount,
+      total: `${currency} ${totalAmount.toFixed(2)}`,
+      status: "confirmed",
+      timestamp: (/* @__PURE__ */ new Date()).toISOString()
+    });
+  } catch (err) {
+    console.error("payment.webhook.error", err);
+    return res.status(500).json({
+      success: false,
+      error: "Payment webhook processing failed",
+      message: err instanceof Error ? err.message : String(err)
+    });
   }
 }
 const seoRoutes = [
@@ -80636,20 +80676,21 @@ const app = express();
 app.set("trust proxy", true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.get("/api/auth/:action", handler$d);
-app.post("/api/auth/:action", handler$c);
-app.get("/api/auth/:action/:detail", handler$b);
-app.post("/api/auth/:action/:detail", handler$a);
-app.post("/api/checkout", handler$9);
-app.post("/api/fulfillment", handler$8);
-app.get("/api/health", handler$7);
-app.get("/api/admin/products", handler$6);
-app.post("/api/admin/products", handler$5);
-app.put("/api/admin/products/:id", handler$4);
-app.delete("/api/admin/products/:id", handler$3);
-app.get("/api/admin/orders", handler$2);
-app.put("/api/admin/orders/:id/status", handler$1);
-app.post("/api/admin/seed", handler);
+app.get("/api/auth/:action", handler$e);
+app.post("/api/auth/:action", handler$d);
+app.get("/api/auth/:action/:detail", handler$c);
+app.post("/api/auth/:action/:detail", handler$b);
+app.post("/api/checkout", handler$a);
+app.post("/api/fulfillment", handler$9);
+app.get("/api/health", handler$8);
+app.get("/api/admin/products", handler$7);
+app.post("/api/admin/products", handler$6);
+app.put("/api/admin/products/:id", handler$5);
+app.delete("/api/admin/products/:id", handler$4);
+app.get("/api/admin/orders", handler$3);
+app.put("/api/admin/orders/:id/status", handler$2);
+app.post("/api/admin/seed", handler$1);
+app.post("/payments", handler);
 app.use("/api", (err, req, res, _next) => {
   console.error("ssr.api.error", {
     url: req.url,
