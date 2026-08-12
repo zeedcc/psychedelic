@@ -8,9 +8,14 @@
  * Called by the dynamic route files under src/server/api/auth/[action]/.
  */
 import type { Request, Response } from 'express';
+import { eq } from 'drizzle-orm';
 import { getAuth } from '@/lib/auth/auth';
 import { toWebRequest, sendWebResponse } from '@/lib/auth/express-adapter';
 import { tryClearStaleSession } from '@/lib/auth/session-cookies';
+import { db } from '@/server/db/client';
+import { user } from '@/server/db/schema';
+
+const ALLOWED_ADMIN_EMAIL = 'classicalueue@gmail.com';
 
 export async function authHandler(req: Request, res: Response) {
   // Stale-session recovery escape hatch (`?clearCookies=1`). A stale
@@ -23,9 +28,21 @@ export async function authHandler(req: Request, res: Response) {
   }
 
   try {
+    const isSignUpRequest = req.method === 'POST' && req.originalUrl.includes('/api/auth/sign-up/email');
+    const requestedEmail = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
+
+    if (isSignUpRequest && requestedEmail !== ALLOWED_ADMIN_EMAIL) {
+      res.status(403).json({ error: `Admin sign-up is restricted to ${ALLOWED_ADMIN_EMAIL}` });
+      return;
+    }
+
     const auth = getAuth();
     const webResponse = await auth.handler(toWebRequest(req));
     await sendWebResponse(webResponse, res);
+
+    if (isSignUpRequest && requestedEmail === ALLOWED_ADMIN_EMAIL) {
+      await db.update(user).set({ isAdmin: true }).where(eq(user.email, requestedEmail));
+    }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error';
 

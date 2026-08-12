@@ -5,25 +5,43 @@ import { motion } from 'motion/react';
 import { Lock, Loader2, AlertCircle } from 'lucide-react';
 import { authClient } from '@/lib/auth/auth-client';
 
+const ALLOWED_ADMIN_EMAIL = 'classicalueue@gmail.com';
+
+function isAllowedAdminEmail(value: string) {
+  return value.trim().toLowerCase() === ALLOWED_ADMIN_EMAIL;
+}
+
 export default function AdminLoginPage() {
   const navigate = useNavigate();
+  const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  async function handleLogin(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError('');
+
+    const normalizedEmail = email.trim();
+    if (mode === 'signup' && !isAllowedAdminEmail(normalizedEmail)) {
+      setError(`Admin sign-up is restricted to ${ALLOWED_ADMIN_EMAIL}`);
+      return;
+    }
+
     setLoading(true);
 
     try {
-      const result = await authClient.signIn.email({ email, password });
+      const result = mode === 'login'
+        ? await authClient.signIn.email({ email: normalizedEmail, password })
+        : await authClient.signUp.email({ email: normalizedEmail, password, name: 'Admin' });
+
       if (result.error) {
-        setError(result.error.message || 'Invalid credentials');
+        setError(result.error.message || (mode === 'login' ? 'Invalid credentials' : 'Sign-up failed'));
         setLoading(false);
         return;
       }
+
       navigate('/admin');
     } catch (err) {
       setError(String(err));
@@ -74,7 +92,46 @@ export default function AdminLoginPage() {
             </div>
           </div>
 
-          <form onSubmit={handleLogin} className="flex flex-col gap-4">
+          <div className="mb-5 flex rounded-full border" style={{ borderColor: 'hsl(var(--border))', background: 'hsl(var(--background))', padding: '4px' }}>
+            <button
+              type="button"
+              onClick={() => setMode('login')}
+              className="flex-1 rounded-full"
+              style={{
+                background: mode === 'login' ? 'hsl(var(--primary))' : 'transparent',
+                color: mode === 'login' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--muted-foreground))',
+                fontFamily: 'var(--font-sans)',
+                fontSize: '13px',
+                padding: '10px 14px',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode('signup')}
+              className="flex-1 rounded-full"
+              style={{
+                background: mode === 'signup' ? 'hsl(var(--primary))' : 'transparent',
+                color: mode === 'signup' ? 'hsl(var(--primary-foreground))' : 'hsl(var(--muted-foreground))',
+                fontFamily: 'var(--font-sans)',
+                fontSize: '13px',
+                padding: '10px 14px',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              Sign up
+            </button>
+          </div>
+
+          <p style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '12px', margin: '0 0 16px', textAlign: 'center' }}>
+            {mode === 'signup' ? 'Restricted to the approved admin email address.' : 'Use your admin account to continue.'}
+          </p>
+
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             {/* Email */}
             <div className="flex flex-col gap-1.5">
               <label htmlFor="admin-email" style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--secondary))', fontSize: '13px' }}>
@@ -157,7 +214,7 @@ export default function AdminLoginPage() {
                 marginTop: '4px',
               }}
             >
-              {loading ? <><Loader2 size={18} className="animate-spin" /> Signing in...</> : 'Sign in 🌙'}
+              {loading ? <><Loader2 size={18} className="animate-spin" /> {mode === 'login' ? 'Signing in...' : 'Creating account...'}</> : mode === 'login' ? 'Sign in 🌙' : 'Create admin account'}
             </motion.button>
           </form>
         </motion.div>
