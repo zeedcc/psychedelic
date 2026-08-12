@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "greeting": "Welcome to Ethereal Psyche 🌙",
+    "tagline": "Step beneath the dream blue moonlight",
+    "mainChannelLabel": "🏮 Main Channel",
+    "mainChannelUrl": "https://t.me/etherzonee"
+  },
+  "catalog": {
+    "sectionTitle": "✨ The Moonlit Catalog",
+    "sectionSubtitle": "Each treasure is a digital file, delivered to your inbox like starlight.",
+    "rulesUrl": "https://t.me/etherzonee/5",
+    "items": [
+      {
+        "id": "item-1",
+        "name": "Moonlit Reverie",
+        "description": "A celestial digital collection wrapped in midnight indigo and soft aurora light.",
+        "price": "₱299"
+      },
+      {
+        "id": "item-2",
+        "name": "Tsukiyo Dreams",
+        "description": "Whispers of a moonlit night — a curated digital treasure for the quiet soul.",
+        "price": "₱499"
+      },
+      {
+        "id": "item-3",
+        "name": "Indigo Lantern",
+        "description": "Soft as paper lantern glow, rare as the stillness between stars.",
+        "price": "₱199"
+      }
+    ]
+  },
+  "cart": {
+    "ctaLabel": "🌙 Open Moonlit Satchel",
+    "ctaSubtext": "Your gathered treasures await"
+  }
+}
