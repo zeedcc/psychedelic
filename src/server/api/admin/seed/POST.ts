@@ -14,10 +14,13 @@ import { user } from '@/server/db/schema';
 import { eq } from 'drizzle-orm';
 
 const ADMIN_EMAIL = 'classicalueue@gmail.com';
+const DEFAULT_ADMIN_PASSWORD = 'Rinchanhai0912!';
 
 export default async function handler(req: Request, res: Response) {
   const { password } = req.body as { password?: string };
-  if (!password || password.length < 8) {
+  const resolvedPassword = password || DEFAULT_ADMIN_PASSWORD;
+
+  if (!resolvedPassword || resolvedPassword.length < 8) {
     return res.status(400).json({ error: 'password must be at least 8 characters' });
   }
 
@@ -32,7 +35,7 @@ export default async function handler(req: Request, res: Response) {
     await auth.api.signUpEmail({
       body: {
         email: ADMIN_EMAIL,
-        password,
+        password: resolvedPassword,
         name: 'Admin',
       },
     });

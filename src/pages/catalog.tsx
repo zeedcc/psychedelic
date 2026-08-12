@@ -42,6 +42,22 @@ export default function CatalogPage() {
   const { addItem, items: cartItems } = useCart();
   const navigate = useNavigate();
   const [justAdded, setJustAdded] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+  const visibleCategories = catalog.categories
+    .map((category) => ({
+      ...category,
+      items: category.items.filter((item) => {
+        if (!normalizedQuery) return true;
+        const haystack = [item.name, item.description, item.type, item.badge]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        return haystack.includes(normalizedQuery);
+      }),
+    }))
+    .filter((category) => !normalizedQuery || category.items.length > 0);
 
   function handleAdd(item: typeof catalog.categories[0]['items'][0]) {
     addItem({
@@ -232,8 +248,43 @@ export default function CatalogPage() {
           style={{ padding: '64px 24px 88px', background: 'hsl(var(--background))' }}
         >
           <div className="mx-auto" style={{ maxWidth: '960px' }}>
-            {catalog.categories.map((category, catIdx) => (
-              <div key={category.id} style={{ marginBottom: catIdx < catalog.categories.length - 1 ? '72px' : 0 }}>
+            <div className="mx-auto mb-8" style={{ maxWidth: '620px' }}>
+              <label htmlFor="catalog-search" className="mb-2 block" style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'hsl(var(--muted-foreground))' }}>
+                Search catalog
+              </label>
+              <input
+                id="catalog-search"
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Search products, categories, or perks"
+                className="w-full rounded-full border"
+                style={{
+                  background: 'hsl(var(--card))',
+                  borderColor: 'hsl(var(--border))',
+                  color: 'hsl(var(--foreground))',
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '15px',
+                  padding: '14px 18px',
+                  minHeight: '52px',
+                  outline: 'none',
+                }}
+              />
+            </div>
+
+            {visibleCategories.length === 0 && normalizedQuery ? (
+              <div className="rounded-2xl border text-center" style={{ background: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', padding: '32px 20px' }}>
+                <p className="m-0" style={{ fontFamily: 'var(--font-heading)', color: 'hsl(var(--foreground))', fontSize: '20px' }}>
+                  No matches found
+                </p>
+                <p className="mt-2 mb-0" style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '14px' }}>
+                  Try another keyword or browse the full catalog.
+                </p>
+              </div>
+            ) : null}
+
+            {visibleCategories.map((category, catIdx) => (
+              <div key={category.id} style={{ marginBottom: catIdx < visibleCategories.length - 1 ? '72px' : 0 }}>
                 {/* Category header */}
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}

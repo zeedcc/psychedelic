@@ -19,6 +19,8 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@/api/*": ["./src/server/api/*"],
+      "@/server/*": ["./src/server/*"],
+      "@/server": ["./src/server"],
       "@/*": ["./src/*"],
       "@airo/content": ["./content-lib/src/index.ts"]
     },

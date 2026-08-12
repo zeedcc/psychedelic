@@ -38,6 +38,8 @@ export default defineConfig({
       '@/components': path.resolve(__dirname, './src/components'),
       '@/lib': path.resolve(__dirname, './src/lib'),
       '@/api': path.resolve(__dirname, './src/server/api'),
+      '@/server': path.resolve(__dirname, './src/server'),
+      '@/server/auth-middleware': path.resolve(__dirname, './src/server/auth-middleware.ts'),
       '@/db': path.resolve(__dirname, './src/server/db'),
       '@/layouts': path.resolve(__dirname, './src/layouts'),
       '@/patterns': path.resolve(__dirname, './src/patterns'),

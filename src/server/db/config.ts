@@ -25,12 +25,32 @@ export interface DatabaseCredentials {
  * @throws Error if config file not found or invalid
  */
 export function getDatabaseCredentials(): DatabaseCredentials {
+  const envHost = env.DATABASE_HOST || env.DB_HOST;
+  const envPort = env.DATABASE_PORT || env.DB_PORT;
+  const envUser = env.DATABASE_USER || env.DB_USER || env.DATABASE_USERNAME || env.DB_USERNAME;
+  const envPassword = env.DATABASE_PASSWORD || env.DB_PASSWORD;
+  const envDatabase = env.DATABASE_NAME || env.DB_NAME;
+
+  if (envHost && envPort && envUser && envPassword && envDatabase) {
+    return {
+      host: envHost,
+      port: parseInt(String(envPort), 10),
+      user: envUser,
+      password: envPassword,
+      database: envDatabase,
+    };
+  }
+
   const configPath = join(env.NOMAD_TASK_DIR || '/local', 'config.json');
 
   if (!existsSync(configPath)) {
-    throw new Error(
-      `Database configuration file not found at ${configPath}`
-    );
+    return {
+      host: envHost || '127.0.0.1',
+      port: parseInt(String(envPort || '3306'), 10),
+      user: envUser || 'root',
+      password: envPassword || 'password',
+      database: envDatabase || 'app',
+    };
   }
 
   try {

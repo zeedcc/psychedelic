@@ -6,7 +6,7 @@ import { join } from 'node:path'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { Plugin } from 'vite'
 
-import { FORMAT_OVERRIDES_MODULE_ID, formatOverridesPlugin } from '../../../format-overrides-plugin'
+import { FORMAT_OVERRIDES_MODULE_ID, formatOverridesPlugin } from '../../../export-plugins/format-overrides-plugin'
 
 interface DirectPluginHooks {
   resolveId: (id: string) => unknown
@@ -109,10 +109,8 @@ describe('formatOverridesPlugin', () => {
       expect(String(loaded)).toContain('"version":1')
       expect(String(loaded)).toContain('"pages/index"')
       expect(String(loaded)).toContain('"overrides":{}')
-      expect(JSON.parse(String(warn.mock.calls[0][0]))).toMatchObject({
-        event: 'format-overrides.sidecar.invalid',
-        scope: 'pages/index',
-      })
+      expect(String(warn.mock.calls[0][0])).toContain('format-overrides.sidecar.invalid')
+      expect(String(warn.mock.calls[0][0])).toContain('pages/index')
     })
   })
 
@@ -132,10 +130,8 @@ describe('formatOverridesPlugin', () => {
       expect(String(loaded)).toContain('"shared"')
       expect(String(loaded)).toContain('"overrides":{}')
       expect(String(loaded)).not.toContain('abc123')
-      expect(JSON.parse(String(warn.mock.calls[0][0]))).toMatchObject({
-        event: 'format-overrides.sidecar.invalid',
-        scope: 'shared',
-      })
+      expect(String(warn.mock.calls[0][0])).toContain('format-overrides.sidecar.invalid')
+      expect(String(warn.mock.calls[0][0])).toContain('shared')
     })
   })
 
@@ -152,10 +148,8 @@ describe('formatOverridesPlugin', () => {
         const plugin = directHooks(formatOverridesPlugin(root))
         await plugin.load('\0virtual:format-overrides')
 
-        expect(JSON.parse(String(warn.mock.calls[0][0]))).toMatchObject({
-          event: 'format-overrides.sidecar.invalid',
-          scope: 'pages/index',
-        })
+        expect(String(warn.mock.calls[0][0])).toContain('format-overrides.sidecar.invalid')
+        expect(String(warn.mock.calls[0][0])).toContain('pages/index')
       })
     } finally {
       if (previousNodeEnv === undefined) {

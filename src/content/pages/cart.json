@@ -23,7 +23,7 @@
   "success": {
     "heading": "Portal summoned 💙",
     "body": "Your Paymongo checkout has been dispatched. Complete payment and your treasure will arrive at your inbox.",
-    "webhookLabel": "Checkout Webhook Dispatched",
+    "webhookLabel": "",
     "continueCta": "✨ Continue browsing"
   },
   "error": {

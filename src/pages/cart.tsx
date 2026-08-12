@@ -18,6 +18,7 @@ export default function CartPage() {
   const [errorMsg, setErrorMsg] = useState('');
   const [webhookPayload, setWebhookPayload] = useState<Record<string, unknown> | null>(null);
 
+  const showWebhookPayload = Boolean(webhookPayload && cartContent.success.webhookLabel);
   const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 
   async function handleCheckout() {
@@ -471,7 +472,7 @@ export default function CartPage() {
                 </div>
 
                 {/* Webhook payload display */}
-                {webhookPayload && (
+                {showWebhookPayload && (
                   <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid hsl(var(--border))' }}>
                     <div style={{ background: 'hsl(var(--muted))', padding: '10px 16px', borderBottom: '1px solid hsl(var(--border))' }}>
                       <p className="m-0" style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>

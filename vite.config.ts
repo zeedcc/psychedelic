@@ -193,6 +193,8 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     alias: {
       nothing: "/src/fallbacks/missingModule.ts",
       "@/api": path.resolve(__dirname, "./src/server/api"),
+      "@/server": path.resolve(__dirname, "./src/server"),
+      "@/server/auth-middleware": path.resolve(__dirname, "./src/server/auth-middleware.ts"),
       "@": path.resolve(__dirname, "./src")
     }
   },

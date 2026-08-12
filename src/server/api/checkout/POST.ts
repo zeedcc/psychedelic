@@ -27,7 +27,7 @@ export default async function handler(req: Request, res: Response) {
     const webhookPayload = {
       action: 'trigger_checkout_webhook',
       gateway: 'paymongo',
-      webhook_endpoint: 'https://etherzone.net/payments',
+      webhook_endpoint: 'https://etherealpsyche.com/payments',
       payload: {
         shop_id: 'ethereal_psyche',
         theme_data: 'dream_blue_moonlight',
@@ -45,7 +45,7 @@ export default async function handler(req: Request, res: Response) {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
-      const resp = await fetch('https://etherzone.net/payments', {
+      const resp = await fetch('https://etherealpsyche.com/payments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(webhookPayload),
