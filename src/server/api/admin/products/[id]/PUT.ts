@@ -11,7 +11,9 @@ export default async function handler(req: Request, res: Response) {
   const id = parseInt(String(req.params.id), 10);
   if (isNaN(id)) return res.status(400).json({ error: 'Invalid product id' });
 
-  const { name, description, price, badge, type, category, active } = req.body;
+  const { name, description, price, badge, type, category, stock, active } = req.body;
+
+  const normalizedStock = stock !== undefined ? Number(stock) : undefined;
 
   try {
     await db.update(product).set({
@@ -21,6 +23,7 @@ export default async function handler(req: Request, res: Response) {
       ...(badge !== undefined && { badge }),
       ...(type !== undefined && { type }),
       ...(category !== undefined && { category }),
+      ...(stock !== undefined && { stock: Number.isFinite(normalizedStock) ? Math.max(0, Math.trunc(normalizedStock as number)) : 0 }),
       ...(active !== undefined && { active }),
     }).where(eq(product.id, id));
 

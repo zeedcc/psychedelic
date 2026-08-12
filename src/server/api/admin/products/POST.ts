@@ -8,10 +8,12 @@ export default async function handler(req: Request, res: Response) {
   const guard = await requireAdmin(req, res);
   if (!guard) return;
 
-  const { name, description, price, badge, type, category, active } = req.body;
+  const { name, description, price, badge, type, category, stock, active } = req.body;
   if (!name || price === undefined) {
     return res.status(400).json({ error: 'name and price are required' });
   }
+
+  const normalizedStock = Number(stock ?? 0);
 
   try {
     const result = await db.insert(product).values({
@@ -21,6 +23,7 @@ export default async function handler(req: Request, res: Response) {
       badge: badge || null,
       type: type || 'Shared Premium',
       category: category || 'Entertainment Premiums',
+      stock: Number.isFinite(normalizedStock) ? Math.max(0, Math.trunc(normalizedStock)) : 0,
       active: active !== false,
     });
     const insertId = Number(result[0].insertId);

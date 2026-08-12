@@ -46,7 +46,8 @@ export const schemas = {
           "description": z.string(),
           "price": z.string(),
           "badge": z.string(),
-          "type": z.string()
+          "type": z.string(),
+          "stock": z.number().optional()
         }))
       })),
       "reminders": z.object({

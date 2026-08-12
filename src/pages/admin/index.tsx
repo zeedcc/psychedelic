@@ -19,6 +19,7 @@ interface Product {
   badge: string | null;
   type: string;
   category: string;
+  stock: number;
   active: boolean;
   createdAt: string;
 }
@@ -65,6 +66,7 @@ function ProductForm({ initial, onSave, onCancel }: ProductFormProps) {
   const [badge, setBadge] = useState(initial?.badge ?? '');
   const [type, setType] = useState(initial?.type ?? 'Shared Premium');
   const [category, setCategory] = useState(initial?.category ?? 'Entertainment Premiums');
+  const [stock, setStock] = useState(initial?.stock ?? 0);
   const [active, setActive] = useState(initial?.active !== false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -75,7 +77,7 @@ function ProductForm({ initial, onSave, onCancel }: ProductFormProps) {
     setSaving(true);
     setError('');
     try {
-      await onSave({ name, description: description || null, price, badge: badge || null, type, category, active });
+      await onSave({ name, description: description || null, price, badge: badge || null, type, category, stock, active });
     } catch (err) {
       setError(String(err));
       setSaving(false);
@@ -139,6 +141,10 @@ function ProductForm({ initial, onSave, onCancel }: ProductFormProps) {
             <option>Entertainment Premiums</option>
             <option>Celestial Exclusives</option>
           </select>
+        </div>
+        <div className="flex flex-col">
+          <label style={labelStyle}>Stock left</label>
+          <input style={inputStyle} type="number" min={0} step={1} value={stock} onChange={(e) => setStock(Number(e.target.value) || 0)} placeholder="0" />
         </div>
       </div>
 
@@ -436,6 +442,9 @@ export default function AdminPage() {
                               </div>
                               <p style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '13px', margin: 0 }}>
                                 {p.category} · {p.type}
+                              </p>
+                              <p style={{ fontFamily: 'var(--font-sans)', color: p.stock > 0 ? 'hsl(var(--primary))' : 'hsl(var(--destructive))', fontSize: '12px', margin: '2px 0 0', fontWeight: 600 }}>
+                                {p.stock > 0 ? `${p.stock} left in stock` : 'Out of stock'}
                               </p>
                               {p.description && (
                                 <p style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '12px', margin: 0, opacity: 0.7 }}>

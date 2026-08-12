@@ -71,6 +71,7 @@ export const product = mysqlTable('product', {
   badge: varchar('badge', { length: 100 }),
   type: varchar('type', { length: 100 }).notNull().default('Shared Premium'),
   category: varchar('category', { length: 100 }).notNull().default('Entertainment Premiums'),
+  stock: int('stock').notNull().default(0),
   active: boolean('active').default(true),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow().onUpdateNow(),

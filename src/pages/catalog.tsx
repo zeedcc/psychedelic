@@ -59,7 +59,11 @@ export default function CatalogPage() {
     }))
     .filter((category) => !normalizedQuery || category.items.length > 0);
 
+  const isOutOfStock = (item: typeof catalog.categories[0]['items'][0]) => typeof item.stock === 'number' && item.stock <= 0;
+
   function handleAdd(item: typeof catalog.categories[0]['items'][0]) {
+    if (isOutOfStock(item)) return;
+
     addItem({
       id: item.id,
       name: item.name,
@@ -342,6 +346,12 @@ export default function CatalogPage() {
                   {category.items.map((item, itemIdx) => {
                     const added = inCart(item.id);
                     const justAddedNow = justAdded.has(item.id);
+                    const outOfStock = isOutOfStock(item);
+                    const stockLabel = typeof item.stock === 'number'
+                      ? item.stock > 0
+                        ? `${item.stock} left in stock`
+                        : 'Out of stock'
+                      : 'Inventory updated regularly';
                     return (
                       <motion.div
                         key={item.id}
@@ -431,6 +441,19 @@ export default function CatalogPage() {
                           {item.description}
                         </p>
 
+                        <p
+                          className="relative z-10 m-0"
+                          style={{
+                            fontFamily: 'var(--font-sans)',
+                            color: outOfStock ? 'hsl(var(--destructive))' : 'hsl(var(--primary))',
+                            fontSize: '12px',
+                            fontWeight: 600,
+                            letterSpacing: '0.02em',
+                          }}
+                        >
+                          {stockLabel}
+                        </p>
+
                         {/* Price + CTA */}
                         <div
                           className="relative z-10 flex items-center justify-between mt-1 pt-3"
@@ -447,31 +470,48 @@ export default function CatalogPage() {
                             {item.price}
                           </span>
                           <motion.button
-                            whileHover={{ scale: added ? 1 : 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: added || outOfStock ? 1 : 1.05 }}
+                            whileTap={{ scale: outOfStock ? 1 : 0.95 }}
                             onClick={() => handleAdd(item)}
+                            disabled={outOfStock}
                             className="inline-flex items-center gap-2 rounded-full transition-all duration-200"
                             style={{
-                              background: added
-                                ? 'hsl(var(--primary) / 0.15)'
-                                : 'hsl(var(--primary))',
-                              border: added
-                                ? '1px solid hsl(var(--primary) / 0.4)'
-                                : '1px solid transparent',
-                              color: added
-                                ? 'hsl(var(--primary))'
-                                : 'hsl(var(--primary-foreground))',
+                              background: outOfStock
+                                ? 'hsl(var(--muted))'
+                                : added
+                                  ? 'hsl(var(--primary) / 0.15)'
+                                  : 'hsl(var(--primary))',
+                              border: outOfStock
+                                ? '1px solid hsl(var(--border))'
+                                : added
+                                  ? '1px solid hsl(var(--primary) / 0.4)'
+                                  : '1px solid transparent',
+                              color: outOfStock
+                                ? 'hsl(var(--muted-foreground))'
+                                : added
+                                  ? 'hsl(var(--primary))'
+                                  : 'hsl(var(--primary-foreground))',
                               fontFamily: 'var(--font-sans)',
                               fontSize: '13px',
                               padding: '10px 18px',
                               minHeight: '42px',
-                              cursor: 'pointer',
+                              cursor: outOfStock ? 'not-allowed' : 'pointer',
                               letterSpacing: '0.03em',
-                              boxShadow: added ? 'none' : '0 0 12px hsl(var(--primary) / 0.2)',
+                              boxShadow: added ? 'none' : outOfStock ? 'none' : '0 0 12px hsl(var(--primary) / 0.2)',
+                              opacity: outOfStock ? 0.8 : 1,
                             }}
                           >
                             <AnimatePresence mode="wait">
-                              {justAddedNow ? (
+                              {outOfStock ? (
+                                <motion.span
+                                  key="sold-out"
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 1 }}
+                                  className="flex items-center gap-1.5"
+                                >
+                                  Sold out
+                                </motion.span>
+                              ) : justAddedNow ? (
                                 <motion.span
                                   key="added"
                                   initial={{ scale: 0, opacity: 0 }}
