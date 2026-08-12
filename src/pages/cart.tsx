@@ -17,6 +17,7 @@ export default function CartPage() {
   const [customerName, setCustomerName] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [webhookPayload, setWebhookPayload] = useState<Record<string, unknown> | null>(null);
+  const [webhookResponse, setWebhookResponse] = useState<Record<string, unknown> | null>(null);
 
   const showWebhookPayload = Boolean(webhookPayload && cartContent.success.webhookLabel);
   const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
@@ -42,10 +43,11 @@ export default function CartPage() {
         }),
       });
 
-      const data = await resp.json() as { error?: string; webhookPayload?: Record<string, unknown> };
+      const data = await resp.json() as { error?: string; webhookPayload?: Record<string, unknown>; webhookResponse?: Record<string, unknown> };
       if (!resp.ok) throw new Error(data.error || 'Checkout failed.');
 
       setWebhookPayload(data.webhookPayload ?? null);
+      setWebhookResponse(data.webhookResponse ?? null);
 
       // 2. Send order confirmation email to customer
       await fetch('/api/fulfillment', {
@@ -471,16 +473,16 @@ export default function CartPage() {
                   </div>
                 </div>
 
-                {/* Webhook payload display */}
-                {showWebhookPayload && (
+                {/* Webhook response display */}
+                {webhookResponse && (
                   <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid hsl(var(--border))' }}>
                     <div style={{ background: 'hsl(var(--muted))', padding: '10px 16px', borderBottom: '1px solid hsl(var(--border))' }}>
                       <p className="m-0" style={{ fontFamily: 'var(--font-sans)', color: 'hsl(var(--muted-foreground))', fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                        {cartContent.success.webhookLabel}
+                        Webhook Response
                       </p>
                     </div>
                     <pre style={{ background: 'hsl(var(--card))', color: 'hsl(var(--secondary))', fontFamily: 'monospace', fontSize: '11px', lineHeight: 1.6, padding: '16px', margin: 0, overflowX: 'auto', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                      {JSON.stringify(webhookPayload, null, 2)}
+                      {JSON.stringify(webhookResponse, null, 2)}
                     </pre>
                   </div>
                 )}

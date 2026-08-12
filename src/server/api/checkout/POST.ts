@@ -41,6 +41,7 @@ export default async function handler(req: Request, res: Response) {
 
     let webhookDispatched = false;
     let webhookStatus = 0;
+    let webhookResponse: Record<string, unknown> | null = null;
 
     try {
       const controller = new AbortController();
@@ -54,6 +55,16 @@ export default async function handler(req: Request, res: Response) {
       clearTimeout(timeoutId);
       webhookDispatched = resp.ok;
       webhookStatus = resp.status;
+
+      // Capture the webhook response body
+      try {
+        const responseText = await resp.text();
+        if (responseText) {
+          webhookResponse = JSON.parse(responseText);
+        }
+      } catch {
+        // If response isn't JSON, just skip
+      }
     } catch {
       // Webhook unreachable — still proceed
     }
@@ -90,6 +101,7 @@ export default async function handler(req: Request, res: Response) {
       success: true,
       orderId: savedOrderId,
       webhookPayload,
+      webhookResponse,
       webhookDispatched,
       webhookStatus,
     });
