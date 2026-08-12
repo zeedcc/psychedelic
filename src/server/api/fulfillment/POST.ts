@@ -156,6 +156,7 @@ export default async function handler(req: Request, res: Response) {
     const total = total_amount || `₱${cart_items.reduce((s, i) => s + i.price, 0).toFixed(2)}`;
 
     await sendEmail({
+      from: 'noreply@etherealpsyche.com',
       fromName: 'Ethereal Psyche',
       to: delivery_email,
       subject: '🌙 Your Ethereal Psyche order is confirmed',
