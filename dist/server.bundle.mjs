@@ -80005,7 +80005,7 @@ async function handler$a(req, res) {
     const webhookPayload = {
       action: "trigger_checkout_webhook",
       gateway: "paymongo",
-      webhook_endpoint: "https://etherealpsyche.com/payments",
+      webhook_endpoint: "https://etherealpsyche.com/cart",
       payload: {
         shop_id: "ethereal_psyche",
         theme_data: "dream_blue_moonlight",
@@ -80022,7 +80022,7 @@ async function handler$a(req, res) {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5e3);
-      const resp = await fetch("https://etherealpsyche.com/payments", {
+      const resp = await fetch("https://etherealpsyche.com/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(webhookPayload),
@@ -80690,7 +80690,7 @@ app.delete("/api/admin/products/:id", handler$4);
 app.get("/api/admin/orders", handler$3);
 app.put("/api/admin/orders/:id/status", handler$2);
 app.post("/api/admin/seed", handler$1);
-app.post("/payments", handler);
+app.post("/cart", handler);
 app.use("/api", (err, req, res, _next) => {
   console.error("ssr.api.error", {
     url: req.url,

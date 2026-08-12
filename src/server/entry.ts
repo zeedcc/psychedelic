@@ -18,7 +18,7 @@ import adminProductDelete from "./api/admin/products/[id]/DELETE";
 import adminOrdersGet from "./api/admin/orders/GET";
 import adminOrderStatusPut from "./api/admin/orders/[id]/status/PUT";
 import adminSeedPost from "./api/admin/seed/POST";
-import paymentsPost from "./api/payments/POST";
+import cartPost from "./api/cart/POST";
 // </api-imports>
 import { seoRoutes } from "../lib/seo-routes";
 import {
@@ -113,7 +113,7 @@ app.delete("/api/admin/products/:id", adminProductDelete);
 app.get("/api/admin/orders", adminOrdersGet);
 app.put("/api/admin/orders/:id/status", adminOrderStatusPut);
 app.post("/api/admin/seed", adminSeedPost);
-app.post("/payments", paymentsPost);
+app.post("/cart", cartPost);
 // </api-registrations>
 
 // Error middleware must be registered AFTER the routes it protects; Express
