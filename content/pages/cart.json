@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Moonlit Satchel",
+    "subtitle": "Your gathered treasures, waiting beneath the moonlight."
+  },
+  "empty": {
+    "message": "Your satchel is empty.",
+    "browseCta": "✨ Browse the Catalog"
+  },
+  "email": {
+    "heading": "Delivery Details",
+    "body": "Your digital files will be delivered to the email address below after payment confirms. 💙",
+    "namePlaceholder": "e.g. Luna",
+    "emailPlaceholder": "your@email.com",
+    "confirmText": "does that look right? 💙",
+    "submitCta": "The stars have aligned — Summon Portal 🌌",
+    "backLabel": "← Back to satchel"
+  },
+  "processing": {
+    "heading": "The stars have aligned for your purchase.",
+    "body": "Please hold while I summon your secure Paymongo portal... 🌌"
+  },
+  "success": {
+    "heading": "Portal summoned 💙",
+    "body": "Your Paymongo checkout has been dispatched. Complete payment and your treasure will arrive at your inbox.",
+    "webhookLabel": "Checkout Webhook Dispatched",
+    "continueCta": "✨ Continue browsing"
+  },
+  "error": {
+    "heading": "Something stirred in the dark",
+    "fallback": "An unexpected error occurred. Please try again.",
+    "retryCta": "Try again"
+  },
+  "reminders": {
+    "title": "𖤓 reminders, whispered gently",
+    "lines": [
+      "clients for entertainment prems (shared) must fill up monitoring forms (see rules)",
+      "send a vouch to one of the owners (tg: @marieldcc / @velleonix) within 24 hours to activate your warranty",
+      "no vouch, no warranty",
+      "not following rules = void warranty"
+    ]
+  }
+}

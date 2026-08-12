@@ -1,0 +1,973 @@
+{
+  "meta": {
+    "title": "The Moonlit Catalog — Ethereal Psyche",
+    "description": "Browse the moonlit catalog of Ethereal Psyche. Each treasure is a digital file, delivered to your inbox like starlight."
+  },
+  "hero": {
+    "eyebrow": "Digital treasures await",
+    "title": "The Moonlit Catalog ✨",
+    "subtitle": "Each item is a digital file delivered to your email after payment. Browse, choose, and let the starlight find you."
+  },
+  "rulesUrl": "https://t.me/etherzonee/5",
+  "mainChannelUrl": "https://t.me/etherzonee",
+  "categories": [
+    {
+      "id": "cat-entertainment",
+      "name": "Entertainment Premiums",
+      "description": "Shared and solo premium accounts for streaming and entertainment — fill up the monitoring form after purchase.",
+      "items": [
+        {
+          "id": "ent-yt-fh-email",
+          "name": "YouTube — FH Buyers Email",
+          "description": "Full household YouTube Premium via buyers email. Straight billing, one month subscription. Can use outside PH.",
+          "price": "₱10",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-yt-indiv-email",
+          "name": "YouTube — Individual Buyers Email",
+          "description": "Individual YouTube Premium via buyers email. Straight billing, one month subscription. Can use outside PH.",
+          "price": "₱8",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-yt-invite-email",
+          "name": "YouTube — Via Invite Buyers Email",
+          "description": "YouTube Premium via invite, buyers email. Straight billing, one month subscription. Can use outside PH.",
+          "price": "₱6",
+          "badge": "Best Value",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-yt-fh-prov",
+          "name": "YouTube — FH Account Provision",
+          "description": "Full household YouTube Premium, account provisioned. Straight billing, one month subscription. Can use outside PH.",
+          "price": "₱35",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-yt-indiv-prov",
+          "name": "YouTube — Individual Account Provision",
+          "description": "Individual YouTube Premium, account provisioned. Straight billing, one month subscription. Can use outside PH.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-shared-monthly",
+          "name": "Disney+ PH — Shared Profile (Monthly)",
+          "description": "Shared profile on Disney+ PH. Straight subscription, with monitoring form. One month.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-solo1d-monthly",
+          "name": "Disney+ PH — Solo Profile 1 Device (Monthly)",
+          "description": "Solo profile, 1 device on Disney+ PH. Straight subscription, with monitoring form. One month.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-solo2d-monthly",
+          "name": "Disney+ PH — Solo Profile 2 Devices (Monthly)",
+          "description": "Solo profile, 2 devices on Disney+ PH. Straight subscription, with monitoring form. One month.",
+          "price": "₱40",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-shared-annual",
+          "name": "Disney+ PH — Shared Profile (Annual)",
+          "description": "Shared profile on Disney+ PH, annual plan. Straight subscription, with monitoring form.",
+          "price": "₱100",
+          "badge": "Annual",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-solo1d-annual",
+          "name": "Disney+ PH — Solo Profile 1 Device (Annual)",
+          "description": "Solo profile, 1 device on Disney+ PH, annual plan. Straight subscription, with monitoring form.",
+          "price": "₱150",
+          "badge": "Annual",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-disney-solo2d-annual",
+          "name": "Disney+ PH — Solo Profile 2 Devices (Annual)",
+          "description": "Solo profile, 2 devices on Disney+ PH, annual plan. Straight subscription, with monitoring form.",
+          "price": "₱185",
+          "badge": "Annual",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-netflix-shared",
+          "name": "Netflix — Shared Profile",
+          "description": "Shared Netflix profile. Straight billing, one month, trial method. PH use only. Fast fixing 0–3 days, with monitoring form, with penalty, full warranty.",
+          "price": "₱55",
+          "badge": "Full Warranty",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-netflix-solo2d",
+          "name": "Netflix — Solo Profile 2 Devices",
+          "description": "Solo Netflix profile, 2 devices. Straight billing, one month, trial method. PH use only. Fast fixing 0–3 days, with monitoring form, with penalty, full warranty.",
+          "price": "₱115",
+          "badge": "Full Warranty",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-spotify-1m-inv",
+          "name": "Spotify — 1 Month Invite/Slot",
+          "description": "Spotify Premium, 1 month via invite or slot. Mixed based, straight billing. No add for buyers email.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-spotify-1m-head",
+          "name": "Spotify — 1 Month Head",
+          "description": "Spotify Premium, 1 month head account. Mixed based, straight billing. No add for buyers email.",
+          "price": "₱130",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-spotify-2m-inv",
+          "name": "Spotify — 2 Months Invite/Slot",
+          "description": "Spotify Premium, 2 months via invite or slot. Mixed based, straight billing. No add for buyers email.",
+          "price": "₱55",
+          "badge": "Best Value",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-spotify-2m-head",
+          "name": "Spotify — 2 Months Head",
+          "description": "Spotify Premium, 2 months head account. Mixed based, straight billing. No add for buyers email.",
+          "price": "₱200",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-apple-music-solo",
+          "name": "Apple Music — Solo Account",
+          "description": "Apple Music solo account, one month subscription.",
+          "price": "₱70",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-amazon-shared",
+          "name": "Amazon Prime Video — Shared Profile",
+          "description": "Shared Amazon Prime Video profile. Straight billing, one month, mixed based. Can use outside PH.",
+          "price": "₱5",
+          "badge": "Best Value",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-amazon-solo2d",
+          "name": "Amazon Prime Video — Solo Profile 2 Devices",
+          "description": "Solo Amazon Prime Video profile, 2 devices. Straight billing, one month, mixed based. Can use outside PH.",
+          "price": "₱10",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-amazon-solo-acc",
+          "name": "Amazon Prime Video — Solo Account",
+          "description": "Solo Amazon Prime Video account. Straight billing, one month, mixed based. Can use outside PH.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-iwant-shared",
+          "name": "iWant TFC — Shared Account",
+          "description": "Shared iWant TFC account. Can be TV login, PH use only. One month subscription, straight billing.",
+          "price": "₱10",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-iwant-solo",
+          "name": "iWant TFC — Solo Account",
+          "description": "Solo iWant TFC account. Can be TV login, PH use only. One month subscription, straight billing.",
+          "price": "₱40",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-nba-shared",
+          "name": "NBA League Pass — Shared Account",
+          "description": "Shared NBA League Pass account. Straight billing, one month subscription.",
+          "price": "₱55",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-nba-solo",
+          "name": "NBA League Pass — Solo Account",
+          "description": "Solo NBA League Pass account. Straight billing, one month subscription.",
+          "price": "₱180",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-vivaone-shared",
+          "name": "VivaOne — Shared Account",
+          "description": "Shared VivaOne account. PH use only, straight billing, one month subscription.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-vivaone-solo5d",
+          "name": "VivaOne — Solo Account 5 Devices",
+          "description": "Solo VivaOne account, 5 devices. PH use only, straight billing, one month subscription.",
+          "price": "₱75",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-vivamax-shared",
+          "name": "Vivamax — Shared Account",
+          "description": "Shared Vivamax account. PH use only, straight billing, one month subscription.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-vivamax-solo5d",
+          "name": "Vivamax — Solo Account 5 Devices",
+          "description": "Solo Vivamax account, 5 devices. PH use only, straight billing, one month subscription.",
+          "price": "₱120",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-1m-shared",
+          "name": "Viu — 1 Month Shared",
+          "description": "Viu shared account, 1 month subscription.",
+          "price": "₱5",
+          "badge": "Best Value",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-1m-solo",
+          "name": "Viu — 1 Month Solo",
+          "description": "Viu solo account, 1 month subscription.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-3m-shared",
+          "name": "Viu — 3 Months Shared",
+          "description": "Viu shared account, 3 month subscription.",
+          "price": "₱15",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-3m-solo",
+          "name": "Viu — 3 Months Solo",
+          "description": "Viu solo account, 3 month subscription.",
+          "price": "₱40",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-6m-shared",
+          "name": "Viu — 6 Months Shared",
+          "description": "Viu shared account, 6 month subscription.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-6m-solo",
+          "name": "Viu — 6 Months Solo",
+          "description": "Viu solo account, 6 month subscription.",
+          "price": "₱75",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-12m-shared",
+          "name": "Viu — 12 Months Shared",
+          "description": "Viu shared account, 12 month subscription.",
+          "price": "₱60",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-12m-solo",
+          "name": "Viu — 12 Months Solo",
+          "description": "Viu solo account, 12 month subscription.",
+          "price": "₱90",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-viu-hbo-1m-solo",
+          "name": "Viu + HBO — 1 Month Solo",
+          "description": "Viu + HBO combo, solo account, 1 month subscription.",
+          "price": "₱70",
+          "badge": "Bundle",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-prem-shared",
+          "name": "HBO Max Premium — Shared Profile",
+          "description": "Shared HBO Max Premium profile. Straight billing, one month, with monitoring form.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-prem-solo1d",
+          "name": "HBO Max Premium — Solo Profile 1 Device",
+          "description": "Solo HBO Max Premium profile, 1 device. Straight billing, one month, with monitoring form.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-prem-solo2d",
+          "name": "HBO Max Premium — Solo Profile 2 Devices",
+          "description": "Solo HBO Max Premium profile, 2 devices. Straight billing, one month, with monitoring form.",
+          "price": "₱40",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-prem-solo10d",
+          "name": "HBO Max Premium — Solo Account 10 Devices",
+          "description": "Solo HBO Max Premium account, 10 devices. Straight billing, one month, with monitoring form.",
+          "price": "₱120",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-std-1m-shared",
+          "name": "HBO Max Standard — 1 Month Shared Profile",
+          "description": "Shared HBO Max Standard profile, 1 month.",
+          "price": "₱15",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-std-1m-solo",
+          "name": "HBO Max Standard — 1 Month Solo Profile",
+          "description": "Solo HBO Max Standard profile, 1 month.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-std-1m-solo-acc",
+          "name": "HBO Max Standard — 1 Month Solo Account",
+          "description": "Solo HBO Max Standard account, 1 month.",
+          "price": "₱65",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-hbo-std-3m-solo-acc",
+          "name": "HBO Max Standard — 3 Months Solo Account",
+          "description": "Solo HBO Max Standard account, 3 months.",
+          "price": "₱100",
+          "badge": "Best Value",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-loklok-shared",
+          "name": "Loklok — Shared Account",
+          "description": "Shared Loklok account, basic plan. Straight billing, one month subscription.",
+          "price": "₱35",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-loklok-solo",
+          "name": "Loklok — Solo Account",
+          "description": "Solo Loklok account, basic plan. Straight billing, one month subscription.",
+          "price": "₱139",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-iqiyi-shared",
+          "name": "iQIYI Premium — Shared Account",
+          "description": "Shared iQIYI Premium account. Can use outside PH, straight billing, one month subscription.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Shared Premium"
+        },
+        {
+          "id": "ent-iqiyi-solo",
+          "name": "iQIYI Premium — Solo Account",
+          "description": "Solo iQIYI Premium account. Can use outside PH, straight billing, one month subscription.",
+          "price": "₱80",
+          "badge": "",
+          "type": "Shared Premium"
+        }
+      ]
+    },
+    {
+      "id": "cat-educational",
+      "name": "Educational & Productivity",
+      "description": "Premium tools for learning, writing, and productivity — shared and solo access at moonlit prices.",
+      "items": [
+        {
+          "id": "edu-scribd-solo",
+          "name": "Scribd — Solo",
+          "description": "Solo Scribd premium access. Unlimited reading, audiobooks, and documents.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-scribd-shared",
+          "name": "Scribd — Shared",
+          "description": "Shared Scribd premium access. Unlimited reading, audiobooks, and documents.",
+          "price": "₱10",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-ms365-famhead",
+          "name": "Microsoft 365 — Family Head",
+          "description": "Microsoft 365 family head account. Full suite access.",
+          "price": "₱70",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-ms365-solo",
+          "name": "Microsoft 365 — Solo",
+          "description": "Microsoft 365 solo account. Full suite access.",
+          "price": "₱45",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-ms365-shared",
+          "name": "Microsoft 365 — Shared",
+          "description": "Microsoft 365 shared account. Full suite access.",
+          "price": "₱20",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-zoom-30d",
+          "name": "Zoom — 30 Days",
+          "description": "Zoom premium access, 30 days.",
+          "price": "₱60",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-zoom-14d",
+          "name": "Zoom — 14 Days",
+          "description": "Zoom premium access, 14 days.",
+          "price": "₱45",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-zoom-7d",
+          "name": "Zoom — 7 Days",
+          "description": "Zoom premium access, 7 days.",
+          "price": "₱25",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-wps-1m",
+          "name": "WPS — 1 Month",
+          "description": "WPS Office premium, 1 month subscription.",
+          "price": "₱50",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-wps-7d",
+          "name": "WPS — 7 Days",
+          "description": "WPS Office premium, 7 day subscription.",
+          "price": "₱25",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-lingokids-1m",
+          "name": "LingoKids — 1 Month",
+          "description": "LingoKids premium, 1 month subscription.",
+          "price": "₱20",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-lingokids-7d",
+          "name": "LingoKids — 7 Days",
+          "description": "LingoKids premium, 7 day subscription.",
+          "price": "₱10",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quizlet-solo",
+          "name": "Quizlet — Solo",
+          "description": "Quizlet Plus solo access. Study smarter with unlimited features.",
+          "price": "₱55",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quizlet-shared",
+          "name": "Quizlet — Shared",
+          "description": "Quizlet Plus shared access. Study smarter with unlimited features.",
+          "price": "₱35",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-plus-1m-inv",
+          "name": "Gemini Plus — 1 Month Solo Invite",
+          "description": "Gemini Plus, 1 month solo via invite.",
+          "price": "₱40",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-pro-1m-inv",
+          "name": "Gemini Pro — 1 Month Solo Invite",
+          "description": "Gemini Pro, 1 month solo via invite.",
+          "price": "₱60",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-pro-1m-indiv",
+          "name": "Gemini Pro — 1 Month Individual Provision",
+          "description": "Gemini Pro, 1 month individual provision.",
+          "price": "₱80",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-pro-18m-inv",
+          "name": "Gemini Pro — 18 Months Solo Invite",
+          "description": "Gemini Pro, 18 months solo via invite.",
+          "price": "₱60",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-pro-18m-link-nw",
+          "name": "Gemini Pro — 18 Months Link (No Warranty)",
+          "description": "Gemini Pro, 18 months via link, no warranty.",
+          "price": "₱200",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gemini-pro-18m-link-3m-warr",
+          "name": "Gemini Pro — 18 Months Link (3 Month Warranty)",
+          "description": "Gemini Pro, 18 months via link, with 3 month warranty.",
+          "price": "₱280",
+          "badge": "With Warranty",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gizmo-1m",
+          "name": "Gizmo — 1 Month",
+          "description": "Gizmo premium, 1 month subscription.",
+          "price": "₱85",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-gizmo-7d",
+          "name": "Gizmo — 7 Days",
+          "description": "Gizmo premium, 7 day subscription.",
+          "price": "₱50",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quillbot-solo",
+          "name": "QuillBot — Solo",
+          "description": "QuillBot Premium solo access. AI-powered paraphrasing and writing tools.",
+          "price": "₱50",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quillbot-shared",
+          "name": "QuillBot — Shared",
+          "description": "QuillBot Premium shared access. AI-powered paraphrasing and writing tools.",
+          "price": "₱25",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quillbot-1m-shared-alt",
+          "name": "QuillBot — 1 Month Shared (Alt)",
+          "description": "QuillBot Premium, 1 month shared access.",
+          "price": "₱15",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-quillbot-1m-solo-alt",
+          "name": "QuillBot — 1 Month Solo (Alt)",
+          "description": "QuillBot Premium, 1 month solo access.",
+          "price": "₱60",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-solo-12m",
+          "name": "Grammarly — Solo 12 Months",
+          "description": "Grammarly Premium solo, 12 month subscription.",
+          "price": "₱200",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-solo-1m",
+          "name": "Grammarly — Solo 1 Month",
+          "description": "Grammarly Premium solo, 1 month subscription.",
+          "price": "₱55",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-solo-7d",
+          "name": "Grammarly — Solo 7 Days",
+          "description": "Grammarly Premium solo, 7 day subscription.",
+          "price": "₱35",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-shared-12m",
+          "name": "Grammarly — Shared 12 Months",
+          "description": "Grammarly Premium shared, 12 month subscription.",
+          "price": "₱60",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-shared-1m",
+          "name": "Grammarly — Shared 1 Month",
+          "description": "Grammarly Premium shared, 1 month subscription.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-grammarly-shared-7d",
+          "name": "Grammarly — Shared 7 Days",
+          "description": "Grammarly Premium shared, 7 day subscription.",
+          "price": "₱15",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-head-warr",
+          "name": "ChatGPT — Head (Full Warranty)",
+          "description": "ChatGPT Plus head account with full warranty.",
+          "price": "₱300",
+          "badge": "Full Warranty",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-solo-warr",
+          "name": "ChatGPT — Solo (Full Warranty)",
+          "description": "ChatGPT Plus solo account with full warranty.",
+          "price": "₱130",
+          "badge": "Full Warranty",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-invite-warr",
+          "name": "ChatGPT — Invite (Full Warranty)",
+          "description": "ChatGPT Plus via invite with full warranty.",
+          "price": "₱85",
+          "badge": "Full Warranty",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-shared-warr",
+          "name": "ChatGPT — Shared (Full Warranty)",
+          "description": "ChatGPT Plus shared account with full warranty.",
+          "price": "₱45",
+          "badge": "Full Warranty",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-head-nowarr",
+          "name": "ChatGPT — Head (No Warranty)",
+          "description": "ChatGPT Plus head account, no warranty.",
+          "price": "₱200",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-solo-nowarr",
+          "name": "ChatGPT — Solo (No Warranty)",
+          "description": "ChatGPT Plus solo account, no warranty.",
+          "price": "₱90",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-invite-nowarr",
+          "name": "ChatGPT — Invite (No Warranty)",
+          "description": "ChatGPT Plus via invite, no warranty.",
+          "price": "₱55",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-chatgpt-shared-nowarr",
+          "name": "ChatGPT — Shared (No Warranty)",
+          "description": "ChatGPT Plus shared account, no warranty.",
+          "price": "₱35",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-studocu-solo-1m",
+          "name": "Studocu — Solo 1 Month",
+          "description": "Studocu premium solo, 1 month subscription.",
+          "price": "₱35",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-studocu-solo-7d",
+          "name": "Studocu — Solo 7 Days",
+          "description": "Studocu premium solo, 7 day subscription.",
+          "price": "₱20",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-studocu-shared-1m",
+          "name": "Studocu — Shared 1 Month",
+          "description": "Studocu premium shared, 1 month subscription.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-studocu-shared-7d",
+          "name": "Studocu — Shared 7 Days",
+          "description": "Studocu premium shared, 7 day subscription.",
+          "price": "₱15",
+          "badge": "Best Value",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-perplexity-solo",
+          "name": "Perplexity — Solo",
+          "description": "Perplexity AI Pro solo access. Advanced AI-powered search and research.",
+          "price": "₱100",
+          "badge": "",
+          "type": "Educational"
+        },
+        {
+          "id": "edu-perplexity-shared",
+          "name": "Perplexity — Shared",
+          "description": "Perplexity AI Pro shared access. Advanced AI-powered search and research.",
+          "price": "₱45",
+          "badge": "Best Value",
+          "type": "Educational"
+        }
+      ]
+    },
+    {
+      "id": "cat-editing",
+      "name": "Editing & Creative Tools",
+      "description": "Premium creative and editing apps — for the artists, editors, and dreamers among us.",
+      "items": [
+        {
+          "id": "edit-capcut-1m-shared",
+          "name": "CapCut Pro — 1 Month Shared",
+          "description": "CapCut Pro shared, 1 month subscription.",
+          "price": "₱35",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-capcut-1m-solo",
+          "name": "CapCut Pro — 1 Month Solo",
+          "description": "CapCut Pro solo, 1 month subscription.",
+          "price": "₱75",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-capcut-7d-solo",
+          "name": "CapCut Pro — 7 Days Solo",
+          "description": "CapCut Pro solo, 7 day subscription.",
+          "price": "₱30",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-remini-solo-1m",
+          "name": "Remini — Solo 1 Month",
+          "description": "Remini Pro solo, 1 month subscription. AI photo enhancer.",
+          "price": "₱30",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-remini-solo-7d",
+          "name": "Remini — Solo 7 Days",
+          "description": "Remini Pro solo, 7 day subscription. AI photo enhancer.",
+          "price": "₱15",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-remini-shared-1m",
+          "name": "Remini — Shared 1 Month",
+          "description": "Remini Pro shared, 1 month subscription. AI photo enhancer.",
+          "price": "₱10",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-remini-shared-7d",
+          "name": "Remini — Shared 7 Days",
+          "description": "Remini Pro shared, 7 day subscription. AI photo enhancer.",
+          "price": "₱5",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-adobe-ps-1m",
+          "name": "Adobe Photoshop — 1 Month",
+          "description": "Adobe Photoshop premium, 1 month subscription.",
+          "price": "₱85",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-camscanner-1m",
+          "name": "CamScanner — 1 Month",
+          "description": "CamScanner premium, 1 month subscription.",
+          "price": "₱35",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-canva-fh",
+          "name": "Canva — Full Head",
+          "description": "Canva Pro full head account.",
+          "price": "₱100",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-canva-solo",
+          "name": "Canva — Solo",
+          "description": "Canva Pro solo access.",
+          "price": "₱8",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-canva-invite",
+          "name": "Canva — Via Invite",
+          "description": "Canva Pro via invite.",
+          "price": "₱3",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-alight-1m",
+          "name": "Alight Motion — 1 Month",
+          "description": "Alight Motion Pro, 1 month subscription. Professional motion graphics and video editing.",
+          "price": "₱75",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-alight-7d",
+          "name": "Alight Motion — 7 Days",
+          "description": "Alight Motion Pro, 7 day subscription. Professional motion graphics and video editing.",
+          "price": "₱45",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-meitu-solo",
+          "name": "Meitu — Solo",
+          "description": "Meitu premium solo access. AI beauty and photo editing.",
+          "price": "₱85",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-meitu-shared",
+          "name": "Meitu — Shared",
+          "description": "Meitu premium shared access. AI beauty and photo editing.",
+          "price": "₱40",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-picsart-solo-1m",
+          "name": "PicsArt — Solo 1 Month",
+          "description": "PicsArt Gold solo, 1 month subscription.",
+          "price": "₱25",
+          "badge": "",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-picsart-solo-7d",
+          "name": "PicsArt — Solo 7 Days",
+          "description": "PicsArt Gold solo, 7 day subscription.",
+          "price": "₱10",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-picsart-shared-1m",
+          "name": "PicsArt — Shared 1 Month",
+          "description": "PicsArt Gold shared, 1 month subscription.",
+          "price": "₱8",
+          "badge": "Best Value",
+          "type": "Creative"
+        },
+        {
+          "id": "edit-picsart-shared-7d",
+          "name": "PicsArt — Shared 7 Days",
+          "description": "PicsArt Gold shared, 7 day subscription.",
+          "price": "₱5",
+          "badge": "Best Value",
+          "type": "Creative"
+        }
+      ]
+    }
+  ],
+  "reminders": {
+    "title": "𖤓 reminders, whispered gently",
+    "lines": [
+      "clients for entertainment prems (shared) must fill up monitoring forms (see rules)",
+      "send a vouch to one of the owners (tg: @marieldcc / @velleonix) within 24 hours to activate your warranty",
+      "no vouch, no warranty",
+      "not following rules = void warranty"
+    ]
+  }
+}
