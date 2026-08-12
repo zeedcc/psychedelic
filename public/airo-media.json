@@ -1,0 +1,95 @@
+{
+  "logo/horizontal": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png",
+    "searchQuery": "A minimal, elegant logo for Ethereal Psyche — a digital boutique with a Dream Bl",
+    "alternatives": [],
+    "solidUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-original-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+    },
+    "mockupUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+    },
+    "landscapeMockupUrlMap": {},
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png": {
+        "sessionId": "f1beb935-8b0a-43d1-9ffb-8490979b46a4",
+        "logoId": "dd4a26be-3b59-4695-a794-9b6202d77c83",
+        "groupId": "5ee3a3d2-429a-4d6a-9a19-63d054e3264d"
+      }
+    },
+    "productMockupsMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png": [
+        {
+          "type": "mug",
+          "label": "Mug",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-mug-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+        },
+        {
+          "type": "card",
+          "label": "Business Card",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-card-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+        },
+        {
+          "type": "tshirt",
+          "label": "T-Shirt",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-tshirt-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+        },
+        {
+          "type": "box",
+          "label": "Packaging",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-box-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+        }
+      ]
+    },
+    "productMockups": [
+      {
+        "type": "mug",
+        "label": "Mug",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-mug-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+      },
+      {
+        "type": "card",
+        "label": "Business Card",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-card-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+      },
+      {
+        "type": "tshirt",
+        "label": "T-Shirt",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-tshirt-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+      },
+      {
+        "type": "box",
+        "label": "Packaging",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-mockup-box-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png"
+      }
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-12T06:23:38.628Z",
+    "lastUpdated": "2026-08-12T06:24:49.258Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#0B1739",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/f1beb935-8b0a-43d1-9ffb-8490979b46a4/horizontal-transparent-dd4a26be-3b59-4695-a794-9b6202d77c83/logo-logo.png",
+    "logoGroupId": "5ee3a3d2-429a-4d6a-9a19-63d054e3264d"
+  },
+  "logo/favicon": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/4885b282-3ddd-4db5-a3cf-9f0e27b2a824/favicon-transparent-c9cfcb4f-3b30-461b-bc4d-19c9f5346c6a/logo-logo.png",
+    "searchQuery": "favicon",
+    "alternatives": [],
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/4885b282-3ddd-4db5-a3cf-9f0e27b2a824/favicon-transparent-c9cfcb4f-3b30-461b-bc4d-19c9f5346c6a/logo-logo.png": {
+        "sessionId": "4885b282-3ddd-4db5-a3cf-9f0e27b2a824",
+        "logoId": "c9cfcb4f-3b30-461b-bc4d-19c9f5346c6a",
+        "groupId": "5ee3a3d2-429a-4d6a-9a19-63d054e3264d"
+      }
+    },
+    "logoGroupId": "5ee3a3d2-429a-4d6a-9a19-63d054e3264d",
+    "userModified": false,
+    "createdAt": "2026-08-12T06:24:24.881Z",
+    "lastUpdated": "2026-08-12T06:24:49.378Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#0B1739",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/dc48e6a9-0e3e-4ae3-b393-e234aceccb91/session/4885b282-3ddd-4db5-a3cf-9f0e27b2a824/favicon-transparent-c9cfcb4f-3b30-461b-bc4d-19c9f5346c6a/logo-logo.png"
+  }
+}
