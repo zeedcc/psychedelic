@@ -28,7 +28,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           name="description"
           content="Step beneath the dream blue moonlight. Ethereal Psyche is a digital boutique offering curated downloadable treasures, delivered to your inbox like starlight."
         />
-        <link rel="icon" href="/airo-assets/images/logo/favicon" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
       </Helmet>
       <ScrollRestoration />
       <Header />
